@@ -12,7 +12,7 @@
 /* mêmes jetons que les tableaux de bord (modèle v3) */
 :root {
   --bg: #f2f4f5; --surface: #ffffff; --ink: #132029; --ink-2: #44555f; --muted: #687983; --line: #d4dbe0;
-  --accent: #1d5d86; --accent-soft: #dce8f0; --cat-1: #2a78d6; --cat-5: #8e5bd0;
+  --accent: #1d5d86; --accent-soft: #dce8f0; --cat-1: #2a78d6; --cat-3: #12807e; --cat-5: #8e5bd0;
   --f-display: "IBM Plex Sans Condensed", "Arial Narrow", "Segoe UI", sans-serif;
   --f-body: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
   --f-mono: "IBM Plex Mono", Consolas, "Courier New", monospace;
@@ -20,12 +20,12 @@
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
     --bg: #0e1418; --surface: #151d22; --ink: #e2e9ed; --ink-2: #b3c0c8; --muted: #8b9aa4; --line: #2a363f;
-    --accent: #6fb0dc; --accent-soft: #1c3343; --cat-1: #3987e5; --cat-5: #a07ae6; color-scheme: dark;
+    --accent: #6fb0dc; --accent-soft: #1c3343; --cat-1: #3987e5; --cat-3: #45b9b4; --cat-5: #a07ae6; color-scheme: dark;
   }
 }
 :root[data-theme="dark"] {
   --bg: #0e1418; --surface: #151d22; --ink: #e2e9ed; --ink-2: #b3c0c8; --muted: #8b9aa4; --line: #2a363f;
-  --accent: #6fb0dc; --accent-soft: #1c3343; --cat-1: #3987e5; --cat-5: #a07ae6; color-scheme: dark;
+  --accent: #6fb0dc; --accent-soft: #1c3343; --cat-1: #3987e5; --cat-3: #45b9b4; --cat-5: #a07ae6; color-scheme: dark;
 }
 * { box-sizing: border-box; }
 body { margin: 0; background: var(--bg); color: var(--ink); font: 400 15px/1.55 var(--f-body); }
@@ -59,7 +59,7 @@ footer { border-top: 1px solid var(--line); padding-top: 18px; display: grid; ga
     <p class="lead">Tableaux de bord du contrôle qualité des données de cheminement piéton accessible d'Anglet (standard CNIG), de l'offre de transport (GTFS) et des sources associées. Chaque page indique ce qui bloque, la décision proposée et le plan d'action, avec une carte des anomalies.</p>
   </header>
 
-  <section class="cartes" aria-label="Tableaux de bord">
+  <section class="cartes" aria-label="Tableaux de bord et prototype">
     <a class="carte" href="tableau_bord_qualite_v3.html" style="--c: var(--cat-1)">
       <span class="k">Base de travail du projet</span>
       <h2>Chaîne de contrôle complète</h2>
@@ -73,6 +73,13 @@ footer { border-top: 1px solid var(--line); padding-top: 18px; display: grid; ga
       <p>Catalogue de 93 contrôles, aligné sur celui de la base du projet (cinq éléments ISO 19157), sur cinq domaines : accessibilité, offre de transport, chantiers, population, structure de la base et contrôle photo.</p>
       <ul><li>décision proposée par domaine</li><li>tables et fichiers manquants repérés</li><li>plan d'action par destinataire</li></ul>
       <span class="go">Ouvrir le tableau de bord →</span>
+    </a>
+    <a class="carte" href="prototype/" style="--c: var(--cat-3)">
+      <span class="k">Diffusion · SIG web</span>
+      <h2>Prototype de l'application PMR</h2>
+      <p>Réseau piéton classé pour les fauteuils roulants, itinéraire accessible selon sept profils de déplacement et dix cartes thématiques, en mode agents ou présentation. Version publique : sans les secteurs prioritaires ni les travaux, réservés à un usage interne.</p>
+      <ul><li>itinéraire décrit en texte, part non mesurée annoncée</li><li>mode présentation pour les associations</li><li>utilisable au clavier et sur téléphone</li></ul>
+      <span class="go">Ouvrir le prototype →</span>
     </a>
   </section>
 
